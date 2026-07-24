@@ -1,4 +1,12 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
 
 *{
     margin:0;
@@ -30,16 +38,14 @@ header{
     gap:10px;
 }
 
-.logo image{
-    width: 65px;
-    height: 65px;
+.logo i{
     font-size:22px;
     color:#333;
 }
 
-.logo h1{
-    font-size:2rem;
-    font-weight:600;
+.logo h2{
+    font-size:24px;
+    font-weight:700;
 }
 
 .header-buttons{
