@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-/* ===========================
-   RESET
-=========================== */
-
 *{
     margin:0;
     padding:0;
@@ -12,20 +8,16 @@
 }
 
 body{
-    background:#f4f7fc;
-    color:#222;
+    background:#62522d;
+    color:#15072b;
 }
-
-/* ===========================
-   HEADER
-=========================== */
 
 header{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:25px 60px;
-    background:#3e5787;
+    background-color: #bf870d;
 }
 
 .logo{
@@ -59,6 +51,11 @@ header{
     font-weight:500;
     box-shadow:0 3px 10px rgba(0,0,0,.08);
     transition:.3s;
+    animation-name:loginAnimation;
+    animation-duration:1.5s;
+    animation-timing-function:ease-in-out;
+    animation-delay:.3s;
+    animation-iteration-count:both;
 }
 
 .login-btn:hover{
@@ -77,6 +74,13 @@ header{
     align-items:center;
     gap:10px;
     box-shadow:0 6px 18px rgba(13,110,253,.35);
+    animation-name:cartAnimation;
+    animation-duration:2s;
+    animation-timing-function:ease-in-out;
+    animation-delay:5s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-fill-mode:both;
 }
 
 .cart-btn span{
@@ -88,19 +92,22 @@ header{
     align-items:center;
     justify-content:center;
     font-size:12px;
+    animation-name:badgePulse;
+    animation-duration:1s;
+    animation-timing-function:ease-in-out;
+    animation-delay:0s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    animation-fill-mode:both;
 }
-
-/* ===========================
-   HERO
-=========================== */
 
 .hero{
     width:85%;
     margin:40px auto;
-    background:linear-gradient(135deg,#101623,#1c2745);
+    background:linear-gradient(135deg,#2b516b,#3f5842);
     border-radius:25px;
     padding:60px;
-    color:#fff;
+    color:#a86d21;
     box-shadow:0 15px 35px rgba(0,0,0,.18);
 }
 
@@ -132,12 +139,8 @@ header{
 }
 
 .hero button:hover{
-    background:#1749b8;
+    background:#bf870d;
 }
-
-/* ===========================
-   FILTER
-=========================== */
 
 .filter{
     width:90%;
@@ -174,10 +177,6 @@ header{
     color:#0d6efd;
 }
 
-/* ===========================
-   PRODUCTS
-=========================== */
-
 .products{
     width:95%;
     margin:60px auto;
@@ -195,7 +194,7 @@ header{
 }
 
 .card{
-    background:#fff;
+    background:#8ed5dd;
     border-radius:20px;
     padding:20px;
     box-shadow:0 10px 20px rgba(0,0,0,.08);
@@ -313,10 +312,6 @@ header{
     font-size:12px;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
-
 footer{
     margin-top:60px;
     background:#1748a2;
@@ -325,10 +320,6 @@ footer{
     color:#272726;
     font-size:15px;
 }
-
-/* ===========================
-   RESPONSIVE
-=========================== */
 
 @media(max-width:768px){
 
@@ -358,5 +349,38 @@ footer{
 
     .product-grid{
         grid-template-columns:1fr;
+    }
+}
+
+@keyframes loginAnimation{
+
+    0%{
+        transform:translateY(0);
+        box-shadow:0 4px 12px rgba(0,0,0,.15);
+    }
+
+    100%{
+        transform:translateY(-6px);
+        box-shadow:0 12px 25px rgba(13,110,253,.35);
+    }
+
+}
+
+@keyframes cartAnimation{
+    0%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(1.08);
+        box-shadow:0 12px 30px rgba(13,110,253,.45);
+    }
+}
+
+@keyframes badgePulse{
+    0%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(1.25);
     }
 }
