@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root{
+    --primary:#2563eb;
+    --accent:#f59e0b;
+    --dark:#111827;
+    --light:#f8fafc;
+    --text:#333;
+    --radius:14px;
+    --shadow:0 12px 24px rgba(0,0,0,.12);
+    --title-size:clamp(2rem,4vw,3rem);
+}
+
 *{
     margin:0;
     padding:0;
